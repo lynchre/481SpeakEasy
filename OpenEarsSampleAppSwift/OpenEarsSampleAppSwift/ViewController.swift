@@ -36,6 +36,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     var prev_string = ""
     var curr_string = ""
     var curr_word = ""
+    var prev_string_stack = [""]
     
     
     @IBOutlet var stopButton:UIButton!
@@ -148,6 +149,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
             }
         }
         prev_string = curr_string
+        prev_string_stack.append(prev_string)
         curr_word = hypothesis
         curr_string = prev_string + " " + hypothesis
         self.heardTextView.text = curr_string
@@ -388,6 +390,29 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
 //        self.stopButton.isHidden = true
 //        self.suspendListeningButton.isHidden = false
 //        self.resumeListeningButton.isHidden = true
+    }
+    
+    @IBAction func exportButtonPressed(_ sender: Any) {
+        let activityViewController = UIActivityViewController(activityItems: [heardTextView.text], applicationActivities: nil)
+        if let popoverPresentationController = activityViewController.popoverPresentationController {
+            popoverPresentationController.barButtonItem = (sender as! UIBarButtonItem)
+        }
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func clearButtonPressed(_ sender: Any) {
+        heardTextView.text = ""
+        prev_string_stack.append("")
+    }
+    
+    
+    @IBAction func undoButtonPressed(_ sender: Any) {
+        if prev_string_stack.count != 0 {
+            heardTextView.text = prev_string_stack.removeLast() as! String
+        }
+        else{
+            prev_string_stack.append("")
+        }
     }
     
     @IBAction func copyButtonPressed(_ sender: Any) {
