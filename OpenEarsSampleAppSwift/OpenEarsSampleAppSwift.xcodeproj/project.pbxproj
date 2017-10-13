@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121449001F91309000320BEF /* wordlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121448FF1F91309000320BEF /* wordlist.swift */; };
 		129D7D2D1F8E729200D67D6A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129D7D2C1F8E729200D67D6A /* AVFoundation.framework */; };
 		129D7D2F1F8E729700D67D6A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129D7D2E1F8E729700D67D6A /* AudioToolbox.framework */; };
 		8C48E2741DB24659006A755E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C48E2731DB24659006A755E /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		121448FF1F91309000320BEF /* wordlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordlist.swift; sourceTree = "<group>"; };
 		129D7D2C1F8E729200D67D6A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		129D7D2E1F8E729700D67D6A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8C48E2701DB24659006A755E /* OpenEarsSampleAppSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenEarsSampleAppSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 				8C48E27F1DB24659006A755E /* Info.plist */,
 				8CDDF1401DB25F32001F67E9 /* LaunchScreen.storyboard */,
 				8CDDF1421DB25F32001F67E9 /* Main.storyboard */,
+				121448FF1F91309000320BEF /* wordlist.swift */,
 			);
 			path = OpenEarsSampleAppSwift;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121449001F91309000320BEF /* wordlist.swift in Sources */,
 				8C48E2761DB24659006A755E /* ViewController.swift in Sources */,
 				8C48E2741DB24659006A755E /* AppDelegate.swift in Sources */,
 			);

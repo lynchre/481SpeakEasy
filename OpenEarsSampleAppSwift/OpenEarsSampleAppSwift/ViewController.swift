@@ -58,14 +58,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
         
         // This is the language model (vocabulary) we're going to start up with. You can replace these words with the words you want to use.
         
-        let firstLanguageArray = ["backward",
-                                  "change",
-                                  "forward",
-                                  "go",
-                                  "left",
-                                  "model",
-                                  "right",
-                                  "turn"]
+        let firstLanguageArray = langArray
         
         let firstVocabularyName = "FirstVocabulary"
         
