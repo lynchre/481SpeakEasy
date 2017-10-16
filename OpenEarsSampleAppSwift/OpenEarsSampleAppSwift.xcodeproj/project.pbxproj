@@ -19,6 +19,10 @@
 		8C48E29A1DB24A07006A755E /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C48E2971DB24A07006A755E /* Slt.framework */; };
 		8CDDF1441DB25F32001F67E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDF1401DB25F32001F67E9 /* LaunchScreen.storyboard */; };
 		8CDDF1451DB25F32001F67E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDDF1421DB25F32001F67E9 /* Main.storyboard */; };
+		9656E5711F92E8FF0058402F /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656E5701F92E8FF0058402F /* Setting.swift */; };
+		9656E5731F92E9F90058402F /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656E5721F92E9F90058402F /* SettingTableViewCell.swift */; };
+		9656E57A1F92F1C80058402F /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9656E5791F92F1C80058402F /* SettingTableViewController.swift */; };
+		96C13BD91F93F3E7002DA519 /* FontSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C13BD81F93F3E7002DA519 /* FontSizeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		8C48E2971DB24A07006A755E /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
 		8CDDF1411DB25F32001F67E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CDDF1431DB25F32001F67E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9656E5701F92E8FF0058402F /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		9656E5721F92E9F90058402F /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		9656E5791F92F1C80058402F /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		96C13BD81F93F3E7002DA519 /* FontSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FontSizeViewController.swift; path = ../FontSizeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +117,13 @@
 				8C48E2751DB24659006A755E /* ViewController.swift */,
 				8C48E2931DB2473B006A755E /* OpenEarsHeader.h */,
 				8C48E27A1DB24659006A755E /* Assets.xcassets */,
+				96C13BD81F93F3E7002DA519 /* FontSizeViewController.swift */,
 				8C48E27F1DB24659006A755E /* Info.plist */,
 				8CDDF1401DB25F32001F67E9 /* LaunchScreen.storyboard */,
 				8CDDF1421DB25F32001F67E9 /* Main.storyboard */,
+				9656E5791F92F1C80058402F /* SettingTableViewController.swift */,
+				9656E5721F92E9F90058402F /* SettingTableViewCell.swift */,
+				9656E5701F92E8FF0058402F /* Setting.swift */,
 				121448FF1F91309000320BEF /* wordlist.swift */,
 			);
 			path = OpenEarsSampleAppSwift;
@@ -242,8 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9656E57A1F92F1C80058402F /* SettingTableViewController.swift in Sources */,
 				121449001F91309000320BEF /* wordlist.swift in Sources */,
+				9656E5731F92E9F90058402F /* SettingTableViewCell.swift in Sources */,
 				8C48E2761DB24659006A755E /* ViewController.swift in Sources */,
+				9656E5711F92E8FF0058402F /* Setting.swift in Sources */,
+				96C13BD91F93F3E7002DA519 /* FontSizeViewController.swift in Sources */,
 				8C48E2741DB24659006A755E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
