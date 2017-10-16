@@ -36,7 +36,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     var prev_string = ""
     var curr_string = ""
     var curr_word = ""
-    var prev_string_stack = [""]
+    var prev_string_stack = ["temp"]
     
     
     @IBOutlet var stopButton:UIButton!
@@ -48,6 +48,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     @IBOutlet var pocketsphinxDbLabel:UILabel!
     @IBOutlet var fliteDbLabel:UILabel!
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.openEarsEventsObserver.delegate = self
@@ -141,10 +142,23 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
                 self.usingStartingLanguageModel = true
             }
         }
+        
+        if(prev_string_stack[0] == "") {
+            heardTextView.text = ""
+            prev_string = ""
+            curr_string = ""
+            print("hypothesis = ", hypothesis!)
+            print("current_string = ", curr_string)
+            print("prev_string = ", prev_string)
+            
+        }
         prev_string = curr_string
         prev_string_stack.append(prev_string)
         curr_word = hypothesis
         curr_string = prev_string + " " + hypothesis
+        print("hypothesis = ", hypothesis!)
+        print("current_string = ", curr_string)
+        print("prev_string = ", prev_string)
         self.heardTextView.text = curr_string
         
         // This is how to use an available instance of OEFliteController. We're going to repeat back the command that we heard with the voice we've chosen.
@@ -395,6 +409,8 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     
     @IBAction func clearButtonPressed(_ sender: Any) {
         heardTextView.text = ""
+        curr_string = ""
+        prev_string = ""
         prev_string_stack.append("")
     }
     
@@ -402,6 +418,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     @IBAction func undoButtonPressed(_ sender: Any) {
         if prev_string_stack.count != 0 {
             heardTextView.text = prev_string_stack.removeLast() as! String
+            curr_string = prev_string
         }
         else{
             prev_string_stack.append("")
@@ -422,5 +439,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
         
         print(UIPasteboard.general.string!)
     }
+    
+    
     
 }
