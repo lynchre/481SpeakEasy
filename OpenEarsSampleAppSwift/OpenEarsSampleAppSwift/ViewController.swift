@@ -395,6 +395,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     
     @IBAction func clearButtonPressed(_ sender: Any) {
         heardTextView.text = ""
+        curr_string = heardTextView.text
         prev_string_stack.append("")
     }
     
@@ -402,6 +403,7 @@ class ViewController: UIViewController, OEEventsObserverDelegate {
     @IBAction func undoButtonPressed(_ sender: Any) {
         if prev_string_stack.count != 0 {
             heardTextView.text = prev_string_stack.removeLast() as! String
+            curr_string = heardTextView.text
         }
         else{
             prev_string_stack.append("")
